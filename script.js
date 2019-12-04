@@ -33,32 +33,26 @@ function playRound(playerSelection, computerSelection) {
   if (playerSelection === computerSelection) {
     console.log("It's a draw.")
     draws++;
-    displayScore();
   } else if (playerSelection === "rock" && computerSelection === "scissors") {
     console.log("You win.")
     playerScore++;
-    displayScore();
   } else if (playerSelection === "rock" && computerSelection === "paper") {
     console.log("You lose.")
     computerScore++;
-    displayScore();
   } else if (playerSelection === "paper" && computerSelection === "rock") {
     console.log("You win.")
     playerScore++;
-    displayScore();
   } else if (playerSelection === "paper" && computerSelection === "scissors") {
     console.log("You lose.")
     computerScore++;
-    displayScore();
   } else if (playerSelection === "scissors" && computerSelection === "paper") {
     console.log("You win.")
     playerScore++;
-    displayScore();
   } else if (playerSelection === "scissors" && computerSelection === "rock") {
     console.log("You lose.")
     computerScore++;
-    displayScore();
   }
+  displayScore();
 }
 
 function displayScore() {
