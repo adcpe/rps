@@ -61,4 +61,4 @@ function displayScore() {
   drawCounter.innerHTML = draws;
 }
 
-displayScore(playerScore, computerScore);
+displayScore();
