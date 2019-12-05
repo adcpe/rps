@@ -5,6 +5,7 @@ let draws = 0;
 const playerCounter = document.querySelector('#playerScore');
 const computerCounter = document.querySelector('#computerScore');
 const drawCounter = document.querySelector('#draws');
+const output = document.querySelector('#output');
 const rock = document.querySelector('#rock');
 const paper = document.querySelector('#paper');
 const scissors = document.querySelector('#scissors');
@@ -31,25 +32,31 @@ function computerPlay() {
 
 function playRound(playerSelection, computerSelection) {
   if (playerSelection === computerSelection) {
-    console.log("It's a draw.")
+    output.innerHTML = `Both of you played ${playerSelection}. <b>It's a draw.</b>`;
     draws++;
   } else if (playerSelection === "rock" && computerSelection === "scissors") {
-    console.log("You win.")
+    output.innerHTML = `You played ${playerSelection} and the computer played
+        ${computerSelection}. <b>You win!</b>`;
     playerScore++;
   } else if (playerSelection === "rock" && computerSelection === "paper") {
-    console.log("You lose.")
+    output.innerHTML = `You played ${playerSelection} and the computer played
+        ${computerSelection}. <b>You lose!</b>`;
     computerScore++;
   } else if (playerSelection === "paper" && computerSelection === "rock") {
-    console.log("You win.")
+    output.innerHTML = `You played ${playerSelection} and the computer played
+        ${computerSelection}. <b>You win!</b>`;
     playerScore++;
   } else if (playerSelection === "paper" && computerSelection === "scissors") {
-    console.log("You lose.")
+    output.innerHTML = `You played ${playerSelection} and the computer played
+        ${computerSelection}. <b>You lose!</b>`;
     computerScore++;
   } else if (playerSelection === "scissors" && computerSelection === "paper") {
-    console.log("You win.")
+    output.innerHTML = `You played ${playerSelection} and the computer played
+        ${computerSelection}. <b>You win!</b>`;
     playerScore++;
   } else if (playerSelection === "scissors" && computerSelection === "rock") {
-    console.log("You lose.")
+    output.innerHTML = `You played ${playerSelection} and the computer played
+        ${computerSelection}. <b>You lose!</b>`;
     computerScore++;
   }
   displayScore();
